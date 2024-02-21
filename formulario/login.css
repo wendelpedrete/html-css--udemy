@@ -1,0 +1,76 @@
+html {
+    background-color: #95a5a6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+form {
+    width: 350px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+fieldset {
+    border: none;
+    margin-top: 1.2rem;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: .25rem;
+}
+
+input {
+    padding: .75rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+}
+
+legend {
+    padding: .5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #454e4f;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    /*O fit-content se comporta como fit-content(stretch). Na prática, isso significa que a caixa usará o espaço disponível, mas nunca mais do que o conteúdo máximo.*/
+    width: fit-content;
+    margin-left: auto;
+    background-color: rgb(95, 101, 223);
+    color: white;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: rgb(95, 101, 223);
+    color: white;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn__apagar {
+    background-color: rgb(240, 46, 46);
+}

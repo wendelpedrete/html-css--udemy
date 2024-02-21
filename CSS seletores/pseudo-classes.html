@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+
+    <style>
+
+        button {
+            background-color: #939393;
+            color: white;
+            border: none;
+            padding: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        button:disabled {
+            opacity: .5;
+        }
+
+        p:empty::before {
+            content: "paragrafo vazio?";
+        }
+
+        a:focus {
+            background-color: yellow;
+        }
+
+        input[type="text"]:read-write {
+            background-color: #ccc;
+            border: none;
+            padding: .5rem;
+        }
+
+        input[type="text"]:read-only {
+            background-color: yellow;
+        }
+
+        input[type="text"]:disabled {
+            background-color: white;
+        }
+
+        input[type="text"]:read-only:not(:disabled) {
+            background-color: yellow;
+        }
+
+        input[type="text"]::placeholder {
+            color: white;
+        }
+
+        input[type="text"]:placeholder-shown {
+            background-color: aqua;
+        }
+
+        p:only-child {
+            background-color: orange;
+        }
+
+        p:read-write {
+            border-bottom: 2px solid red;
+        }
+
+        div:target {
+            border: 4px dashed red;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="top">
+        <a href="#titulo">Vai para o titulo</a>
+        <br>
+        <button>Vai</button>
+        <br>
+        <button disabled>Vai disabled</button>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eaque neque corrupti, beatae non obcaecati, sit est labore autem minima earum dolorum minus debitis! Odit ratione dolorum veritatis numquam sequi.</p>
+    <p></p>
+
+    <ul>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+    </ul>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab sit, quam provident dolores, ea pariatur laborum doloribus totam natus, dolor ratione quasi facere quia blanditiis voluptas asperiores quas harum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab sit, quam provident dolores, ea pariatur laborum doloribus totam natus, dolor ratione quasi facere quia blanditiis voluptas asperiores quas harum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab sit, quam provident dolores, ea pariatur laborum doloribus totam natus, dolor ratione quasi facere quia blanditiis voluptas asperiores quas harum.</p>
+
+    <form action="">
+        <input type="text" name="" id="" value="valor inicial"> <br><br>
+        <input type="text" name="" id="" value="valor" disabled> <br><br>
+        <input type="text" name="" id="" value="valor" readonly> <br><br>
+        <input type="text" name="" id="" placeholder="placeholder"> <br><br>
+        <input type="text" name="" id=""> <br><br>
+    </form>
+
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus suscipit minus omnis ipsa sit officia beatae pariatur, impedit accusamus harum! Iusto, minus molestiae? Distinctio saepe quia laborum sunt, quaerat eos?</p>
+    </div>
+    <hr>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus suscipit minus omnis ipsa sit officia beatae pariatur, impedit accusamus harum! Iusto, minus molestiae? Distinctio saepe quia laborum sunt, quaerat eos?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus suscipit minus omnis ipsa sit officia beatae pariatur, impedit accusamus harum! Iusto, minus molestiae? Distinctio saepe quia laborum sunt, quaerat eos?</p>
+        <p contenteditable>paragrafo editavel</p>
+    </div>
+
+    <div id="titulo">
+        <h1>Titulo</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, praesentium saepe! Obcaecati, numquam rerum fugit libero accusamus, odio expedita optio consequatur iste fuga voluptate. Voluptatum pariatur sequi quo aperiam veritatis!</p>
+        <a href="#top">Vai pra cima</a>
+    </div>
+
+    <br><br><br><br><br><br><br>
+
+</body>
+</html>

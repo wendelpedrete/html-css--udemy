@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medidas</title>
+
+    <style>
+
+        html {
+            font-size: 62.5%;
+            padding-bottom: 550px;
+        }
+
+        p {
+            font-size: 2em;
+            /*1 em = 16px*/
+            width: 10em;
+            background-color: #ccc;
+        }
+
+        b {
+            color: red;
+            font-size: 1rem;
+            /* rem = Relativo a font do HTML */
+        }
+
+        .porcentagem {
+            width: 50%;
+            height: 500px;
+            background-color: yellow;
+        }
+
+        .porcentagem p {
+            background-color: orange;
+            padding-top: 50%;
+            width: 50%;
+        }
+
+        .padding-em {
+            background-color: red;
+            padding: 3em;
+        }
+
+        .padding-em p{
+            background-color: transparent;
+            margin: 0;
+            padding: 1em;
+            font-size: 30px;
+        }
+
+        .viewport-container {
+            font-size: 3rem;
+            height: auto;
+        }
+
+        .viewport {
+            width: 90vw;
+            height: 90vh;
+            background-color: rgba(0, 0, 255, 0.463);
+        }
+
+        .em {
+            width: 20em;
+            padding: 1em;
+            margin: 1em;
+            background-color: orange;
+            font-size: 1.6em;
+        }
+
+        .ch {
+            width: 20ch;
+            width: 180px;
+            padding: 1em;
+            margin: 1em;
+            background-color: orange;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidades de Medidas</h1>
+
+    <p>Lorem ipsum dolor sit amet <b>Texto em negrito</b>consectetur adipisicing elit. Quaerat at voluptatibus recusandae facere provident error labore cum architecto dignissimos est, beatae similique enim tenetur porro minus quas nisi explicabo sequi!</p>
+
+    <div class="porcentagem">
+        <p>Unidade de medida %</p>
+    </div>
+
+    <div class="padding-em">
+        <p>padding com em</p>
+    </div>
+
+    <div class="porcentagem viewport-container">
+        <div class="viewport">Viewport</div>
+    </div>
+
+    <div class="em">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita assumenda ipsa harum et perspiciatis
+        exercitationem iste sed laborum qui consequuntur!
+    </div>
+
+    <div class="ch">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates minus deleniti voluptatem corrupti repellat
+        eius a itaque doloremque laborum molestiae.
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <script>
+            
+            var arr = ['1',2,3,4,5,50,20,4,2];
+
+            var sohNumeros = arr.every( function(el, indice, objeto) {
+
+                return typeof el === 'number';
+
+            } );
+
+            console.log(sohNumeros);
+
+            var aoMenosUmNumero = arr.some( function(el){
+                return typeof el === 'number';
+            });
+
+            console.log(aoMenosUmNumero);
+
+            var numeros = arr.filter(function(el, i, arr){
+                return typeof el === 'number';
+            });
+
+            console.log(numeros);
+
+            arr.forEach(function(el, i, arr){
+                console.log('el=', el, '   |   i=', i, '   |   i - ', arr.toString());
+            })
+
+            var posicaoStr1 = arr.indexOf(4);
+            console.log('posicaoStr1', posicaoStr1);
+
+            var posicaoStr2 = arr.lastIndexOf(4);
+            console.log('posicaoStr1', posicaoStr2);
+
+            console.log(numeros);
+            numeros = numeros.map( function(el, i, arr){
+                return el * i;
+            });
+            console.log(numeros);
+
+            var arr2 = arr.concat(numeros, 'olá', 'arr2');
+            console.log(arr2);
+
+            var str = arr2.join(' -- ');
+            console.log(str);
+
+            arr.push('novo item');
+            console.log(arr);
+
+            var ultimoItem = arr.pop();
+            console.log(ultimoItem);
+            console.log(arr);
+
+            var primeiroItem = arr.shift();
+            console.log(typeof primeiroItem);
+            console.log(arr);
+
+            arr.unshift(true, false, 'unshift');
+            console.log(arr);
+
+            var somaDeArr = numeros.reduce(function(anterior, atual, i){
+                return anterior + atual + i;
+            });
+            console.log(somaDeArr);
+            console.log(numeros);
+
+            var testeReduce = ['1', '2', '3'].reduce(function(i, a){
+                return i + a;
+            });
+            console.log(testeReduce);
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    min-height: 100vh;
+    background-color: silver;
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: 150px;
+}
+
+.gallery {
+    width: 60rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: .5rem;
+    background-color: white;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.505);
+}
+
+.gallery .image {
+    flex-basis: calc(25% - .5rem);
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.image a {
+    text-decoration: none;
+}
+
+.gallery p {
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    letter-spacing: 2px;
+    font-size: .75em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 1;
+    transform: translateY(100%);
+    transition: all .3s ease-in-out;
+}
+
+.image:hover p {
+    transform: translateY(0);
+}
+
+.image img {
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
+}
+
+.image:hover img {
+    transform: scale(1.2);
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    inset: 0;
+    opacity: .5;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+}
+
+.image:hover::after {
+    opacity: 0;
+}

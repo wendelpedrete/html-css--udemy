@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <style>
+
+        ::cue {
+            color: yellow;
+            font-size: 1.6em;
+            background-color: rgba(0, 0, 0, 0.616);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <video controls>
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.ogv" type="video/ogg">
+        <source src="media/video.webm" type="video/webm">
+        <track src="media/track.pt.vtt" kind="captions" srclang="pt" label="português" default>
+        <track src="media/track.em.vtt" kind="captions" srclang="en" label="English" default>
+
+        <p>O seu browser não suporta video</p>
+    </video>
+    
+</body>
+</html>

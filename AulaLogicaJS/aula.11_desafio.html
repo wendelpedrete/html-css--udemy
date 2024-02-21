@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script>
+
+        <style>
+
+            .done {
+                text-decoration: line-through;
+                color: #555;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+
+        <script>
+            
+            (function(){
+                'use strict';
+
+                var nome = 'daniel tapias morales';
+                var nomeFormatado = formatarNome(nome);
+
+                function formatarNome(nome){
+                    var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+                    if(posicaoUltimoEspaco <= 0) {
+                        return nome;
+                    }
+
+                    var ultimoNome = nome.slice(posicaoUltimoEspaco + 1);
+                    console.log('ultimoNome',ultimoNome);
+
+                    var primeiroNome = nome.slice(0, posicaoUltimoEspaco);
+                    console.log('posicaoUltimoEspaco', posicaoUltimoEspaco);
+
+                    return ultimoNome +','+ primeiroNome;
+                }
+
+                console.log(nomeFormatado);
+
+            })()
+
+        </script>
+        
+    </body>
+</html>

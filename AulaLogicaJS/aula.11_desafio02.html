@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis possimus ab, sit delectus sed suscipit nostrum pariatur eveniet aperiam illo ullam nobis assumenda numquam quod qui nam debitis illum. Quis!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, atque? Odit excepturi illo dolorum, aliquid suscipit, iure numquam omnis perspiciatis totam corporis fugit ratione est facilis nisi. Commodi, enim similique.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolores reiciendis delectus placeat rem non suscipit repellendus voluptatem nobis sit, atque voluptates culpa reprehenderit consequuntur, libero accusamus aliquam numquam magni.</p>
+
+        <script>
+            
+
+                    var $paragrafos = document.querySelectorAll('p');
+
+                    var x = 0;
+                    while($paragrafos[x]){
+                        $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                        x++;
+                    }
+
+                function formatarTexto(texto){
+                    var numeroMaximo = 20;
+                     if(texto.length <= numeroMaximo){
+                        return texto;
+                    }
+
+                    var subTexto = texto.slice(0, numeroMaximo);
+                    return subTexto + '...';
+                    
+                }
+                
+
+        </script>
+        
+    </body>
+</html>
